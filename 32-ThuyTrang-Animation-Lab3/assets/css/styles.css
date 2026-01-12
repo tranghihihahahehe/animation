@@ -1,0 +1,86 @@
+/* CHUNG */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    transition: background 0.3s, color 0.3s;
+}
+
+section {
+    height: 100vh;
+    padding: 40px;
+}
+
+/* DARK MODE */
+.dark {
+    background: #222;
+    color: #fff;
+}
+
+/* MENU */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-right: 20px;
+}
+nav a.active {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* BOX ANIMATION */
+.box {
+    width: 200px;
+    height: 100px;
+    background: #3498db;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BUTTON JUMP */
+.jump {
+    padding: 10px 20px;
+}
+.jump.animate {
+    animation: jump 0.4s;
+}
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.circle {
+    position: fixed;        
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;         
+    top: 0;
+    left: 0;
+}

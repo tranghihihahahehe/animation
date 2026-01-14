@@ -1,0 +1,138 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+section {
+    margin-bottom: 50px;
+}
+h2 {
+    margin-bottom: 15px;
+}
+
+/* =======================
+   BÀI 1: BUTTON HOVER
+======================= */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.btn:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+/* =======================
+   BÀI 2: GALLERY
+======================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.gallery figure {
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   BÀI 3: MENU UNDERLINE
+======================= */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* =======================
+   BÀI 4: CARDS
+======================= */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card h3, .card p {
+    padding: 10px;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   BÀI 5: BANNER FADE-IN
+======================= */
+.banner {
+    height: 200px;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-title {
+    color: #fff;
+    font-size: 36px;
+    opacity: 0;
+    animation: fade-in 2s ease forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
